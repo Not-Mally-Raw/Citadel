@@ -1,0 +1,35 @@
+[package]
+name = "cross-chain-bridge"
+version = "0.1.0"
+edition = "2021"
+authors = ["Your Name <your.email@example.com>"]
+description = "Cross-chain bridge integrations for the smart vault system"
+
+[dependencies]
+near-sdk = { workspace = true }
+serde = { workspace = true }
+serde_json = { workspace = true }
+tokio = { workspace = true, features = ["full", "sync", "time"] }
+async-trait = { workspace = true }
+thiserror = { workspace = true }
+web3 = { workspace = true }
+ethabi = { workspace = true }
+rust_decimal = { workspace = true }
+dashmap = "5.4"
+backoff = { version = "0.4", features = ["tokio"] }
+futures = "0.3"
+tracing = "0.1"
+tracing-subscriber = { version = "0.3", features = ["env-filter"] }
+metrics = "0.20"
+metrics-exporter-prometheus = "0.11"
+parking_lot = "0.12"
+lru = "0.10"
+rayon = "1.7"
+tokio-stream = "0.1"
+anyhow = { workspace = true }
+
+[dev-dependencies]
+tokio-test = "0.4"
+mockall = "0.11"
+wiremock = "0.5"
+test-context = "0.1"
