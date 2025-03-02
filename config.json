@@ -1,0 +1,57 @@
+{
+    "network": {
+        "near_testnet": {
+            "rpc_url": "https://rpc.testnet.near.org",
+            "helper_url": "https://helper.testnet.near.org",
+            "explorer_url": "https://explorer.testnet.near.org"
+        },
+        "aurora_testnet": {
+            "rpc_url": "https://testnet.aurora.dev",
+            "chain_id": 1313161555
+        }
+    },
+    "contracts": {
+        "vault": {
+            "name": "smart_vault.testnet",
+            "min_deposit": "1000000000000000000000000",
+            "max_deposit": "1000000000000000000000000000",
+            "fee_bps": 30
+        },
+        "bridge": {
+            "near_address": "bridge.testnet",
+            "aurora_address": "0x0000000000000000000000000000000000000000",
+            "confirmation_blocks": 30
+        }
+    },
+    "oracles": {
+        "chainlink": {
+            "feed_registry": "feed.testnet.chainlink.near",
+            "update_threshold": 3600,
+            "heartbeat": 86400
+        },
+        "dia": {
+            "oracle_address": "oracle.testnet.dia.near"
+        }
+    },
+    "protocols": {
+        "aave": {
+            "lending_pool": "0x0000000000000000000000000000000000000000",
+            "min_collateral_ratio": 12000
+        },
+        "uniswap": {
+            "router": "0x0000000000000000000000000000000000000000",
+            "factory": "0x0000000000000000000000000000000000000000"
+        }
+    },
+    "security": {
+        "max_slippage_bps": 100,
+        "min_liquidity_usd": "100000",
+        "max_position_size_bps": 2000,
+        "emergency_shutdown_threshold_bps": 2000
+    },
+    "monitoring": {
+        "alert_webhook": "https://api.monitoring.com/webhook",
+        "health_check_interval": 300,
+        "max_retry_attempts": 3
+    }
+} 
